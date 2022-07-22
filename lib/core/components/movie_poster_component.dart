@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class MoviePosterComponent extends StatelessWidget {
   const MoviePosterComponent({
     Key? key,
-    required this.imageUrl,
     this.child,
+    required this.imageUrl,
   }) : super(key: key);
 
   final String imageUrl;
@@ -12,11 +12,12 @@ class MoviePosterComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
+
     return Padding(
       padding: const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 16.0),
       child: Container(
-        height: _size.height * 0.7,
+        height: size.height * 0.6,
         alignment: Alignment.bottomCenter,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),

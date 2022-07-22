@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:search_movies/core/client/services/api_path_settings.dart';
 import 'package:search_movies/core/components/linear_gradient_component.dart';
 import 'package:search_movies/core/components/movie_poster_component.dart';
-import 'package:search_movies/core/models/movie_model.dart';
+import 'package:search_movies/core/models/movie.dart';
 
 class MovieCardComponent extends StatelessWidget {
   const MovieCardComponent({
@@ -11,7 +11,7 @@ class MovieCardComponent extends StatelessWidget {
     required this.movie,
   }) : super(key: key);
 
-  final MovieModel movie;
+  final Movie movie;
 
   final Widget? child;
 
@@ -34,15 +34,14 @@ class MovieCardComponent extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 12.0),
-            // TODO, precisar chamar o genero
             Text(
-              movie.id.toString(),
+              movie.genresName!.join(' - '),
               style: const TextStyle(
                 fontSize: 10.0,
                 color: Colors.white,
                 fontWeight: FontWeight.w400,
               ),
-            )
+            ),
           ],
         ),
       ),
