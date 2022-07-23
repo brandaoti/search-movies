@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:search_movies/core/client/services/api_path_settings.dart';
-import 'package:search_movies/core/components/linear_gradient_component.dart';
-import 'package:search_movies/core/components/movie_poster_component.dart';
-import 'package:search_movies/core/models/movie.dart';
+
+import '../../../core/client/services/api_path_settings.dart';
+import '../../../core/components/components.dart';
+import '../../../core/models/models.dart';
+import '../../../core/values/values.dart';
 
 class MovieCardComponent extends StatelessWidget {
   const MovieCardComponent({
@@ -28,19 +29,12 @@ class MovieCardComponent extends StatelessWidget {
           children: [
             Text(
               movie.title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-              ),
+              style: AppTextStyles.movieCardTitleStyle,
             ),
             const SizedBox(height: 12.0),
             Text(
-              movie.genresName!.join(' - '),
-              style: const TextStyle(
-                fontSize: 10.0,
-                color: Colors.white,
-                fontWeight: FontWeight.w400,
-              ),
+              movie.genresName?.join(' - ') ?? AppStrings.genreUnavailable,
+              style: AppTextStyles.movieCardSubtitleStyle,
             ),
           ],
         ),

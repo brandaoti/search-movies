@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/models/genre.dart';
-import 'genre_item_component.dart';
+import '../../../core/models/models.dart';
+import '../../../core/values/values.dart';
+import 'header_genre_component.dart';
 
 class HeaderComponent extends StatelessWidget {
   const HeaderComponent({
     Key? key,
-    this.onChanged,
     required this.genres,
+    required this.onSearchChanged,
+    required this.onChangedGenre,
   }) : super(key: key);
 
-  final ValueChanged<String>? onChanged;
   final List<Genre> genres;
+  final Function(int) onChangedGenre;
+  final ValueChanged<String> onSearchChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -22,29 +25,23 @@ class HeaderComponent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 24.0),
-          const Text(
-            'Filmes',
-            style: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.w600,
-            ),
+          Text(
+            AppStrings.headerTitle,
+            style: AppTextStyles.headerTitleStyle,
           ),
           const SizedBox(height: 24.0),
           TextFormField(
-            onChanged: onChanged,
-            decoration: const InputDecoration(
+            onChanged: onSearchChanged,
+            decoration: AppDecorations.inputDecoration(
               filled: true,
-              hintText: 'Pesquise filmes',
-              prefixIcon: Icon(Icons.search, color: Color(0xFF5E6770)),
+              hintText: AppStrings.headerSearchMovies,
             ),
           ),
           const SizedBox(height: 16.0),
-
-          // ! Category
-          CategoriesComponent(
+          HeaderGenreComponent(
             genres: genres,
+            onChangedGenre: onChangedGenre,
           ),
-
           const SizedBox(height: 16.0),
         ],
       ),
