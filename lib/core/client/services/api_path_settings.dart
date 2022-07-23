@@ -3,4 +3,6 @@
 class ApiPathSettings {
   static String REQUEST_IMG(String filePath) =>
       "https://image.tmdb.org/t/p/original$filePath";
+
+  static String API_KEY = '<<api_key>>';
 }

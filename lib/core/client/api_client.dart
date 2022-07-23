@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
 
+import 'services/api_path_settings.dart';
+
 abstract class ApiClient {
   Dio get instance;
 }
@@ -14,7 +16,10 @@ class ApiClientImpl implements ApiClient {
     _dio = Dio(
       BaseOptions(
         baseUrl: 'https://api.themoviedb.org/3',
-        queryParameters: {'api_key': 'a84494faf90abbc9d3f6783cf036c2dd'},
+        queryParameters: {
+          'language': 'pt-BR',
+          'api_key': ApiPathSettings.API_KEY,
+        },
       ),
     );
   }
