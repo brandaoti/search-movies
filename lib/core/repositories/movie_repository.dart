@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:search_movies/core/models/movie_details.dart';
 
 import '../client/client.dart';
 import '../models/genre.dart';
@@ -8,6 +9,7 @@ abstract class MovieRepository {
   Future<List<Genre>> getGenre();
   Future<List<Movie>> getMovies();
   Future<List<Movie>> searchMovies(String search);
+  Future<MovieDetails> getMovieDetails(int id);
 }
 
 class MovieRepositoryImpl implements MovieRepository {
@@ -52,6 +54,18 @@ class MovieRepositoryImpl implements MovieRepository {
           .toList();
     } on DioError catch (error) {
       throw Exception('Algo deu errado: $error');
+    }
+  }
+
+  @override
+  Future<MovieDetails> getMovieDetails(int id) async {
+    final response = await _apiClient.instance.get('/movie/$id');
+
+    try {
+      final movieDetails = MovieDetails.fromMap(response.data);
+      return movieDetails;
+    } on DioError catch (error) {
+      throw Exception('Não foi carregar os detalhes do filme: $error');
     }
   }
 }
