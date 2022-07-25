@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../core/models/models.dart';
 import '../../../core/values/values.dart';
-import 'header_genre_component.dart';
+import 'header_genre_item_component.dart';
 
 class HeaderComponent extends StatelessWidget {
   const HeaderComponent({
@@ -38,7 +38,7 @@ class HeaderComponent extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16.0),
-          HeaderGenreComponent(
+          HeaderGenreItemComponent(
             genres: genres,
             onChangedGenre: onChangedGenre,
           ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/models/genre.dart';
-import 'header_genre_card_item_component.dart';
+import 'header_genre_card_component.dart';
 
-class HeaderGenreComponent extends StatefulWidget {
-  const HeaderGenreComponent({
+class HeaderGenreItemComponent extends StatefulWidget {
+  const HeaderGenreItemComponent({
     Key? key,
     this.height,
     required this.genres,
@@ -17,10 +17,11 @@ class HeaderGenreComponent extends StatefulWidget {
   final double? height;
 
   @override
-  State<HeaderGenreComponent> createState() => _HeaderGenreComponentState();
+  State<HeaderGenreItemComponent> createState() =>
+      _HeaderGenreItemComponentState();
 }
 
-class _HeaderGenreComponentState extends State<HeaderGenreComponent> {
+class _HeaderGenreItemComponentState extends State<HeaderGenreItemComponent> {
   var selectedGenre = 0;
 
   @override
@@ -40,14 +41,14 @@ class _HeaderGenreComponentState extends State<HeaderGenreComponent> {
     return SizedBox(
       height: widget.height ?? size.height * .04,
       child: ListView.builder(
-        itemCount: widget.genres.length,
+        itemCount: 4,
         clipBehavior: Clip.none,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
           final genre = widget.genres[index];
           return Padding(
             padding: const EdgeInsets.only(right: 12.0),
-            child: HeaderGenreCardItemComponent(
+            child: HeaderGenreCardComponent(
               name: genre.name,
               isSelected: index == selectedGenre,
               onTap: () => _onChangedGenre(

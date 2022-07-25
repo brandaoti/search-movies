@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../core/values/values.dart';
 
-class HeaderGenreCardItemComponent extends StatelessWidget {
-  const HeaderGenreCardItemComponent({
+class HeaderGenreCardComponent extends StatelessWidget {
+  const HeaderGenreCardComponent({
     Key? key,
     this.onTap,
     this.height,
