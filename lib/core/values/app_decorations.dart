@@ -32,16 +32,10 @@ class AppDecorations {
     );
   }
 
-  static BoxDecoration moviePosterDecoration({
-    BoxFit fit = BoxFit.fill,
-    required ImageProvider image,
-  }) {
+  static BoxDecoration moviePosterDecoration({DecorationImage? image}) {
     return BoxDecoration(
+      image: image,
       borderRadius: BorderRadius.circular(10.0),
-      image: DecorationImage(
-        fit: fit,
-        image: image,
-      ),
       boxShadow: const [
         BoxShadow(
           blurRadius: 20,

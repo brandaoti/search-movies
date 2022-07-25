@@ -69,10 +69,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         final movies = states.movies[index];
 
                         return InkWell(
-                          onTap: () {},
-                          child: MovieCardComponent(
-                            movie: movies,
-                          ),
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              '/movie_details',
+                              arguments: movies.id,
+                            );
+                          },
+                          child: MovieCardComponent(movie: movies),
                         );
                       },
                     ),

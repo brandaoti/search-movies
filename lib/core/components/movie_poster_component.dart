@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:search_movies/core/values/app_decorations.dart';
+
+import '../values/values.dart';
 
 class MoviePosterComponent extends StatelessWidget {
   const MoviePosterComponent({
     Key? key,
     this.child,
+    this.width,
     this.height,
     this.decoration,
-    required this.imageUrl,
+    required this.image,
+    this.fit = BoxFit.fill,
   }) : super(key: key);
 
-  final String imageUrl;
   final Widget? child;
   final double? height;
+  final double? width;
+  final BoxFit? fit;
   final Decoration? decoration;
+  final ImageProvider image;
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +28,11 @@ class MoviePosterComponent extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 16.0),
       child: Container(
         height: height ?? size.height * 0.6,
+        width: width ?? size.width,
         alignment: Alignment.bottomCenter,
         decoration: decoration ??
             AppDecorations.moviePosterDecoration(
-              image: NetworkImage(imageUrl),
+              image: DecorationImage(image: image, fit: fit),
             ),
         child: child,
       ),
