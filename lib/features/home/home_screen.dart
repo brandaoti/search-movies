@@ -35,6 +35,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -77,7 +83,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               arguments: movies.id,
                             );
                           },
-                          child: MovieCardComponent(movie: movies),
+                          child: Hero(
+                            tag: movies.id,
+                            child: MovieCardComponent(movie: movies),
+                          ),
                         );
                       },
                     ),
@@ -88,6 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
             return WarningComponent(
               onRefresh: _getMovies,
+              child: const Center(child: CircularProgressIndicator()),
             );
           },
         ),
