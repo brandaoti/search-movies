@@ -32,4 +32,35 @@ class AppTextStyles {
           : AppColors.headerGenresSelectedBackgroundColor['selected'],
     );
   }
+
+  // Movie details
+  static final TextStyle voteAverageStyle = TextStyle(
+    fontSize: 24.0,
+    fontWeight: FontWeight.w600,
+    color: AppColors.voteAverageColor,
+  );
+
+  static final TextStyle movieTitleStyle = TextStyle(
+    fontSize: 14.0,
+    fontWeight: FontWeight.w600,
+    color: AppColors.movieTitleColor,
+  );
+
+  static final movieOriginalTitleStyle = movieTitleStyle.copyWith(
+    fontSize: 10.0,
+    fontWeight: FontWeight.w400,
+    color: AppColors.movieOriginalTitleColor,
+  );
+
+  static final TextStyle movieOverviewStyle = TextStyle(
+    fontSize: 14.0,
+    fontWeight: FontWeight.w400,
+    color: AppColors.overviewTitleColor,
+  );
+
+  static final TextStyle textSpanCardStyle = TextStyle(
+    fontSize: 12.0,
+    fontWeight: FontWeight.w600,
+    color: AppColors.textSpanTitleColor,
+  );
 }

@@ -25,13 +25,16 @@ class TextSpanCardComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height ?? 36,
+      height: height,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         color: AppColors.textSpanCardBackgroundColor,
       ),
       alignment: alignment ?? Alignment.centerLeft,
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16.0,
+        vertical: 10.0,
+      ),
       child: RichText(
         text: TextSpan(
           text: title,

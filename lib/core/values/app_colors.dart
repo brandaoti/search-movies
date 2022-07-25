@@ -8,8 +8,7 @@ class AppColors {
   static const Color _grey2 = Color(0xFFE9ECEF);
   static const Color _grey3 = Color(0xFF868E96);
   static const Color _grey4 = Color(0xFF5E6770);
-  static const Color _grey5 = Color(0xFF494E52);
-  static const Color _grey6 = Color(0xFF343A40);
+  static const Color _grey5 = Color(0xFF343A40);
   static const Color _blueGrey = Color(0xFF00384C);
 
   static Color get iconColor => _grey4;
@@ -17,7 +16,7 @@ class AppColors {
   static Color get linerGradientColor => _black;
 
   // Header
-  static Color get headerTitleColor => _grey6;
+  static Color get headerTitleColor => _grey5;
   static Color get headerGenresBorderColor => _grey2;
   static Color get headerSearchMoviesHintColor => _grey4;
   static Color get headerSearchMoviesFilledColor => _grey1;
@@ -31,4 +30,15 @@ class AppColors {
     'selected': _blueGrey,
     'unselected': _white,
   };
+
+  // Movie Details
+  static Color get averageMaxColor => _grey3;
+  static Color get movieTitleColor => _grey5;
+  static Color get voteAverageColor => _blueGrey;
+  static Color get movieOriginalTitleColor => _grey4;
+  static Color get overviewTitleColor => _grey4;
+  static Color get movieOverviewColor => _grey5;
+  static Color get textSpanTitleColor => _grey3;
+  static Color get textSpanSubtitleColor => _grey5;
+  static Color get textSpanCardBackgroundColor => _grey1;
 }
