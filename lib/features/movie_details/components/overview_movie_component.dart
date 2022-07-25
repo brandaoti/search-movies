@@ -28,7 +28,7 @@ class OverviewMovieComponent extends StatelessWidget {
           ),
           const SizedBox(height: 8.0),
           Text(
-            overview,
+            overview.isEmpty ? AppStrings.unavailable : overview,
             textAlign: TextAlign.left,
             style: AppTextStyles.movieOverviewStyle.copyWith(
               fontSize: 12.0,

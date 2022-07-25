@@ -14,6 +14,7 @@ class AppColors {
   static Color get iconColor => _grey4;
   static Color get backgroundColor => _white;
   static Color get linerGradientColor => _black;
+  static Color get backgroundStackColor => _grey1;
 
   // Header
   static Color get headerTitleColor => _grey5;

@@ -38,7 +38,7 @@ class AppDecorations {
       borderRadius: BorderRadius.circular(10.0),
       boxShadow: const [
         BoxShadow(
-          blurRadius: 20,
+          blurRadius: 0, //TODO voltar pra 20
           spreadRadius: -10,
           offset: Offset(0, 20),
           color: Color.fromRGBO(0, 56, 76, 0.2),
@@ -46,4 +46,10 @@ class AppDecorations {
       ],
     );
   }
+
+  static BoxDecoration genreCardComponent = BoxDecoration(
+    color: AppColors.backgroundColor,
+    border: Border.all(color: AppColors.headerGenresBorderColor),
+    borderRadius: BorderRadius.circular(5.0),
+  );
 }

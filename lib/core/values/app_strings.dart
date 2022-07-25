@@ -4,7 +4,7 @@ class AppStrings {
   static const _genreUnavailable = 'Gênero indisponível';
 
   static const _budget = 'Orçamento: ';
-  static const _budgetUnavailable = 'Indisponível';
+  static const _unavailable = 'Indisponível';
   static const _productionCompany = 'Produtoras: ';
 
   static const _movieYear = 'Ano: ';
@@ -13,6 +13,7 @@ class AppStrings {
   static const _movieOriginalTitle = 'Título original: ';
 
   static String get headerTitle => _headerTitle;
+  static String get unavailable => _unavailable;
 
   static String get genreUnavailable => _genreUnavailable;
   static String get headerSearchMovies => _headerSearchMovies;
@@ -24,6 +25,6 @@ class AppStrings {
   static String get movieOriginalTitle => _movieOriginalTitle;
 
   static String get budget => _budget;
-  static String get budgetUnavailable => _budgetUnavailable;
+  static String get budgetUnavailable => _unavailable;
   static String get productionCompany => _productionCompany;
 }
