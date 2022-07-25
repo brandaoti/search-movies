@@ -1,16 +1,53 @@
-# search_movies
+<br>
+<h3 align="center"> Aplicativo para listagem e filtragem de filmes. </h3>
+<br>
 
-A new Flutter project.
+[//]: # (Adicione seus gifs / imagens aqui:)
 
-## Getting Started
+<p align="center"> 
+  <img src="screenshots/search_movie.gif" alt="demo" height="500"> 
+</p>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+<p align="center">
+  <br>
+  <img src="screenshots/home_page.png" alt="demo" height="500">
+  <img src="screenshots/search_movies.png" alt="demo" height="500">
+  <img src="screenshots/movie_details_01.png" alt="demo" height="500">
+  <img src="screenshots/movie_details_02.png" alt="demo" height="500">
+</p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<hr />
+
+## **Informações:**
+[//]: # (Descreva seu objetivo e o que foi usado no projeto:)
+
+* Projeto desenvolvido através do desafio técnico.
+
+- **[THE MOVIE DB: Api](https://developers.themoviedb.org/3/getting-started/introduction)** 
+
+<hr />
+
+<!-- ## **How to reach me:**
+[//]: # (Adicione suas redes:)
+
+[Instagram - Pessoal](https://www.instagram.com/dannbrandao_)
+
+<hr /> -->
+
+## **Linguagens e Ferramentas:**
+[//]: # (Adicione os recursos do seu projeto aqui:)
+
+- <code><img height="20" src="https://github.com/brandaoti/organizar-github/blob/main/img/flutter.png"></code> **Flutter**
+- <code><img height="20" src="https://github.com/brandaoti/organizar-github/blob/main/img/dart.png"></code> **Dart**
+
+<hr />
+
+## Iniciar Projeto
+[//]: # (Descreva aqui a forma de usar / instalar seu projeto:)
+
+1° Clone este repo usando: git clone `https://github.com/brandaoti/search-movies.git` <br />
+2° Mova-se para o diretório apropriado: `cd search-movies` <br />
+3° Digite `flutter run` para instalar as dependência e apk <br />
+4° Para o projeto funcionar é necessario criar um token e adicione no arquivo `core/client/service/ApiPathSettings` do projeto
