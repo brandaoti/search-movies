@@ -1,6 +1,11 @@
-export 'average_movie_vote_component.dart';
 export 'budget_component.dart';
+export 'credits_component.dart';
 export 'genre_card_component.dart';
-export 'movie_release_date_component.dart';
+export 'credit_card_component.dart';
+export 'back_button_component.dart';
+export 'text_span_card_component.dart';
 export 'original_title_component.dart';
 export 'overview_movie_component.dart';
+export 'average_movie_vote_component.dart';
+export 'movie_release_date_component.dart';
+export 'average_movie_vote_component.dart';

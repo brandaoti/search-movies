@@ -6,6 +6,8 @@ class AppStrings {
   static const _budget = 'Orçamento: ';
   static const _unavailable = 'Indisponível';
   static const _productionCompany = 'Produtoras: ';
+  static const _cast = 'Elenco';
+  static const _crew = 'Diretor';
 
   static const _backButton = 'Voltar';
 
@@ -15,6 +17,9 @@ class AppStrings {
   static const _movieOriginalTitle = 'Título original: ';
 
   static String get backButton => _backButton;
+
+  static String get castTitle => _cast;
+  static String get crewTitle => _crew;
 
   static String get headerTitle => _headerTitle;
   static String get unavailable => _unavailable;
