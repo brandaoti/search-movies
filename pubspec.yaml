@@ -20,6 +20,9 @@ dependencies:
 
   # client http
   dio: ^4.0.6
+  
+  # Number format
+  intl:
 
 dev_dependencies:
   flutter_test:

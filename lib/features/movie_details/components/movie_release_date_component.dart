@@ -38,9 +38,11 @@ class MovieReleaseDateComponent extends StatelessWidget {
                 : '${date.year}',
           ),
           const SizedBox(width: 12),
-          TextSpanCardComponent(
-            title: AppStrings.movieDuration,
-            subtitle: subtitle,
+          Expanded(
+            child: TextSpanCardComponent(
+              title: AppStrings.movieDuration,
+              subtitle: subtitle,
+            ),
           ),
         ],
       ),
