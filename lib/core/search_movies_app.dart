@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:search_movies/core/helpers/app_theme.dart';
 
 import '../features/home/home_screen.dart';
+import '../features/movie_details/movie_details_screen.dart';
 
 class SearchMoviesApp extends StatelessWidget {
   const SearchMoviesApp({Key? key}) : super(key: key);
@@ -12,7 +13,10 @@ class SearchMoviesApp extends StatelessWidget {
       title: 'Search Movies',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.theme(),
-      home: const HomeScreen(),
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/movie_details': (context) => const MovieDetailsScreen(),
+      },
     );
   }
 }

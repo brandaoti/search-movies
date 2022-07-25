@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/client/api_client.dart';
+import '../../core/components/warning_component.dart';
 import '../../core/repositories/movie_repository.dart';
 import '../controllers/movie_controller.dart';
 import '../states/movie_states.dart';
@@ -85,7 +86,9 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             }
 
-            return Container();
+            return WarningComponent(
+              onRefresh: _getMovies,
+            );
           },
         ),
       ),

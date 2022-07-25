@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/models/models.dart';
@@ -39,15 +40,22 @@ class MovieController extends ValueNotifier<MovieStates> {
         _movies[i] = tempMovie;
       }
       value = MovieLoaded(movies: _movies, genres: _genres);
-    } catch (e) {
+    } on DioError catch (e) {
       value = MovieError(message: e.toString());
+      throw Exception('Não foi possível carregar os filmes: $e');
     }
 
     return _movies;
   }
 
   Future<List<Genre>> loadGenres() async {
-    _genres.addAll(await _repository.getGenre());
+    try {
+      final genre = await _repository.getGenre();
+
+      _genres.addAll(genre);
+    } on DioError catch (e) {
+      throw Exception('Não foi possível carregar o gênero do filme: $e');
+    }
     return _genres;
   }
 
