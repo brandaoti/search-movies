@@ -18,7 +18,7 @@ class AppColors {
 
   // Header
   static Color get headerTitleColor => _grey5;
-  static Color get headerGenresBorderColor => _grey2;
+  static Color get headerGenresBorderColor => _grey1;
   static Color get headerSearchMoviesHintColor => _grey4;
   static Color get headerSearchMoviesFilledColor => _grey1;
 

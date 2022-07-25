@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 
+import '../client/client.dart';
 import 'company.dart';
 import 'genre.dart';
 
@@ -41,7 +42,7 @@ class MovieDetails {
       runtime: json['runtime'],
       title: json['title'],
       overview: json['overview'],
-      posterPath: json['poster_path'],
+      posterPath: json['poster_path'] ?? ApiPathSettings.FILE_NOT_FOUND,
       originalTitle: json['original_title'],
       voteAverage: json['vote_average'] ?? 0.0,
       releaseDate: DateTime.parse(json['release_date']),

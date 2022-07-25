@@ -15,6 +15,8 @@ class AppTextStyles {
   static TextStyle get movieOverviewStyle => _movieOverviewStyle;
   static TextStyle get genreCardTitleStyle => _genreCardTitleStyle;
 
+  static TextStyle get backButtonStyle => _backButtonStyle;
+
   static const _headerTitleStyle = TextStyle(
     fontSize: 18.0,
     fontWeight: FontWeight.w600,
@@ -64,6 +66,12 @@ class AppTextStyles {
 
   static final _genreCardTitleStyle = _movieCardTitleStyle.copyWith(
     color: AppColors.overviewTitleColor,
+  );
+
+  static final _backButtonStyle = TextStyle(
+    fontSize: 12.0,
+    color: AppColors.iconColor,
+    fontWeight: FontWeight.w500,
   );
 
   static TextStyle headerGenreStyle({required bool isSelectedColor}) {

@@ -7,10 +7,14 @@ class AppStrings {
   static const _unavailable = 'Indisponível';
   static const _productionCompany = 'Produtoras: ';
 
+  static const _backButton = 'Voltar';
+
   static const _movieYear = 'Ano: ';
   static const _movieDuration = 'Duração: ';
   static const _movieOverview = 'Descrição';
   static const _movieOriginalTitle = 'Título original: ';
+
+  static String get backButton => _backButton;
 
   static String get headerTitle => _headerTitle;
   static String get unavailable => _unavailable;

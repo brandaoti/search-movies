@@ -38,7 +38,7 @@ class AppDecorations {
       borderRadius: BorderRadius.circular(10.0),
       boxShadow: const [
         BoxShadow(
-          blurRadius: 0, //TODO voltar pra 20
+          blurRadius: 20,
           spreadRadius: -10,
           offset: Offset(0, 20),
           color: Color.fromRGBO(0, 56, 76, 0.2),

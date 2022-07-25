@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 
+import '../client/client.dart';
+
 class Movie {
   final int id;
   final String title;
@@ -24,7 +26,7 @@ class Movie {
       id: json['id'] ?? '',
       title: json['title'] ?? '',
       overview: json['overview'] ?? '',
-      posterPath: json['poster_path'] ?? '',
+      posterPath: json['poster_path'] ?? ApiPathSettings.FILE_NOT_FOUND,
       originalTitle: json['original_title'] ?? '',
       genreIds: (json['genre_ids'] as List)
           .map((id) => int.parse(id.toString()))
